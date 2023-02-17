@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="./all.css">
+</head>
+<body>
+  <div id="logIn" class="">
+    <div class="dFlex">
+      <header>
+        <div class="logo logo-lg">
+          <h1>ONLINE TODO LIST</h1>
+          <img src="./images/Vector.png" alt="logo" class="iconOut">
+          <img src="./images/Vector@2x.png" alt="logo2" class="iconIn">
+        </div>
+        <div class="logImg"></div>
+      </header>
+      <form id="toLogIn">
+        <h2>最實用的線上待辦事項服務</h2>
+        <label for="email-log" class="d-block">Email</label>
+        <input type="email" class="d-block card" id="email-log" placeholder="請輸入Email" required>
+        <label for="password-log" class="d-block">密碼</label>
+        <input type="password" class="d-block card" id="password-log" placeholder="請輸入密碼" autocomplete="false" required>
+        <div class="btn-group">
+          <button type="submit" class="btn-dark mt-1">登入</button>
+          <a href="#" class="btn d-block mt-1" id="preSignUp">註冊帳號</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="signUp" class="none">
+    <div class="dFlex">
+      <header>
+        <div class="logo logo-lg">
+          <h1>ONLINE TODO LIST</h1>
+          <img src="./images/Vector.png" alt="logo" class="iconOut">
+          <img src="./images/Vector@2x.png" alt="logo2" class="iconIn">
+        </div>
+        <div class="logImg"></div>
+      </header>
+      <form  id="toSignUp">
+        <h2>註冊帳號</h2>
+        <label for="email" class="d-block">Email</label>
+        <input type="email" class="d-block card" id="email" placeholder="請輸入Email" required>
+        <label for="nickName" class="d-block">您的暱稱</label>
+        <input type="text" class="d-block card" id="nickName" placeholder="請輸入您的暱稱" required>
+        <label for="password" class="d-block">密碼</label>
+        <input type="password" class="d-block card" id="password" placeholder="請輸入密碼" 
+        pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" autocomplete="false" required>
+        <label for="password-cfd" class="d-block">再次輸入密碼</label>
+        <input type="password" class="d-block card" id="password-cfd" placeholder="請再次輸入密碼" autocomplete="false" required>
+        <div class="btn-group">
+          <button type="submit" class="btn-dark mt-1">註冊帳號</button>
+          <a href="#" class="btn d-block mt-1" id="preLogIn">登入</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="todoList" class="bg none">
+    <nav>
+      <div class="logo">
+        <h1>ONLINE TODO LIST</h1>
+        <img src="./images/Vector.png" alt="logo" class="iconOut">
+        <img src="./images/Vector@2x.png" alt="logo2" class="iconIn">
+      </div>
+      <div>
+        <a href="#" class="nickName btn"></a>
+        <a href="#" class="btn" id="logOut">登出</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="card input">
+        <input type="text" placeholder="請輸入待辦事項" />
+        <a href="#" class="btn_add">+</a>
+      </div>
+      <div class="card card_list">
+        <ul class="tab">
+          <li>全部</li>
+          <li>待完成</li>
+          <li>已完成</li>
+        </ul>
+        <div class="cart_content">
+          <ul class="list"></ul>
+          <div class="list_footer">
+          </div>
+        </div>
+      </div>
+      <div class="empty">
+        <p class="empty-text">目前尚無待辦事項</p>
+        <img src="./images/empty 1.png" alt="empty">
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./all.js"></script>
+</html>
