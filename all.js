@@ -294,6 +294,7 @@ function toLogOut(){
   axios.delete(`${url}/users/sign_out`)
       .then(res => {
         console.log(res)
+        todoList.classList.add('none');
         swalSuccess(res.data.message, goLogIn())
       })
       .catch(error => console.log(error.response))
